@@ -1,18 +1,37 @@
+apply from: 'maven.gradle'
 buildscript {
+    apply from: 'maven.gradle'
     repositories {
+     maven {
+            url "${MAVEN_URL}"
+            credentials {
+                username "${MAVEN_USER}"
+                password "${MAVEN_PWD}"
+            }
+        }
+        google()
         jcenter()
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:2.3.3'
-        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.android.tools.build:gradle:3.4.1'
     }
 }
 
 allprojects {
-
     repositories {
-        jcenter()
+     maven {
+            url "${MAVEN_URL}"
+            credentials {
+                username "${MAVEN_USER}"
+                password "${MAVEN_PWD}"
+            }
+        }
         google()
+        jcenter()
     }
+}
+
+ext {
+    sdkVersion = 28
 }

@@ -1,0 +1,7 @@
+def url="http://10.50.101.156:8081/"
+ext {
+    MAVEN_URL = "${url}repository/maven-public/"
+    MAVEN_UPLOAD_URL = "${url}repository/android-repositories/"
+    MAVEN_USER = "admin"
+    MAVEN_PWD = "admin1234"
+}
