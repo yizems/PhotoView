@@ -1,7 +1,8 @@
-def url="http://10.50.101.156:8081/"
+def url= System.getenv("MAVEN_PATH")
+println(url)
 ext {
-    MAVEN_URL = "${url}repository/maven-public/"
+    MAVEN_URL = "${url}repository/android-repositories/"
     MAVEN_UPLOAD_URL = "${url}repository/android-repositories/"
-    MAVEN_USER = "admin"
-    MAVEN_PWD = "admin1234"
+    MAVEN_USER = "dev"
+    MAVEN_PWD = "1234.com"
 }

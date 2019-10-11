@@ -9,6 +9,7 @@ buildscript {
                 password "${MAVEN_PWD}"
             }
         }
+	 maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
     }
@@ -27,6 +28,7 @@ allprojects {
                 password "${MAVEN_PWD}"
             }
         }
+	 maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         google()
         jcenter()
     }
